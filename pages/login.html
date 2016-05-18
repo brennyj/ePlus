@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/login-style.css">
+    <title>New Game +</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<script>
+		function validateFormLogin() {
+			var email = document.forms["loginForm"]["email"].value;
+			var at = email.lastIndexOf("@");
+			if (email == null || email == "" || at == -1) {
+				alert("Please enter a valid email address and password" );
+				return false;
+			}
+		}
+		function validateFormRegister() {
+			var email = document.forms["registerForm"]["rEmail"].value;
+			var at = email.lastIndexOf("@");
+			if (email == null || email == "" || at == -1) {
+				alert("Please enter a valid email address" );
+				return false;
+			}
+		}
+	</script>
+	  </head>
+	  <body>
+		<header>
+			<img src="../images/infs.png" alt="New Game + Logo">
+			<h1>For when you don't know what to play next</h1>
+			<form class="login" name="loginForm" action="index.html" onsubmit="return validateFormLogin()">
+				Email
+				<input type="text" name="email"> 
+				Password
+				<input type="password">
+				<button>Login</button>
+			</form>
+		</header>
+		<form class="register" name="registerForm" action="index.html" onsubmit="return validateFormRegister()">
+			<h2>Get Started</h2><br>
+			Email<br>
+			<input type="text" name="rEmail"> <br><br>
+			Password <br>
+			<input type="password"> <br><br>
+			Confirm Password <br>
+			<input type="password"><br>
+			<button class="but">Register</button>
+		</form>
+	<section class="about">
+		<h2>Manage games you own on all platforms</h2>
+		<h2>Review and rate your games</h2>
+		<h2>Receive custom suggestions based on your opinions</h2> 
+	</section>
+  </body>
+</html>
