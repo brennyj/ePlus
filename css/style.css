@@ -43,16 +43,19 @@ h1{
 	float:right;
 	color:#333;
 }
-
+h2{
+	text-align: center;
+}
 body{
 	background:#fff;
-	font-family:sans-serif;
+	font-family: 'Abel', sans-serif;
+
 }
 
 * {
 margin:0;
 padding:0;
-font-family:sans-serif;
+font-family: 'Abel', sans-serif;
 }
 
 .none a{
@@ -74,7 +77,7 @@ none a:hover{
 
 .none button{
 	background-color:#B72927;
-    border:none;
+	border:none;
     color:white;
     padding:5px;
     text-align:center;
@@ -141,11 +144,65 @@ button{
     -webkit-transition-duration:0.4s;
     transition-duration:0.4s;
     cursor:pointer;
+    border-radius: 5px 5px 5px 5px;
+    width:200px;
 }
 
 button:hover{
 	background-color:#841F1F;
 }
+.about{
+	padding: 50px;
+	margin: 25px;
+}
+#about{
+	padding: 35px;
+}
+.contact{
+	text-align: center;
+
+}
+/**---------Form styling starts--------**/
+#formposition{
+	position: relative;
+}
+#forms{
+	position: absolute;
+	float: center;
+	left: 0;
+	right: 0;
+	top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #333;
+	color: white;
+	padding: 60px;
+	border-radius: 30px 30px 30px 30px;
+	box-shadow: 15px 15px 15px 15px;
+	max-width: 500px;
+	height:300px;
+}
+.login{
+	float: right;
+	padding: ;
+}
+.register{
+	float: left;
+}
+.login, .register{
+	text-align: center;
+}
+input{
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+#profile input, select{
+	width: 250px;
+	padding: 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+/**---------Form styling Ends--------**/
 /**Fade Caption Effect for Images
 based off the tutorial from http://demo.hongkiat.com/css3-image-captions/index.html**/
 #mainwrapper .box {
@@ -197,3 +254,4 @@ based off the tutorial from http://demo.hongkiat.com/css3-image-captions/index.h
 #mainwrapper .box:hover .fade-caption, #mainwrapper .box:hover .scale-caption  {
 	opacity: 1;
 }
+/**---------Fade Caption Effect End--------**/

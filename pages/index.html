@@ -6,25 +6,64 @@
     <title>Entertain +</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-	<header>
-		<img src="../images/infs.png" alt="Entertain + Logo">
-		<h1>For when you don't know what to watch next</h1>
-		<nav>
-			<a href="new.html"> Find New </a>
-			<a href="myshows.html"> My shows </a>
-			<a href="community.html"> Community </a>
-			<a href="profile.html"> My Profile </a>
-			<a href="login.html"> Log Out</a>
-		</nav>
-	</header>
-	<section class="none">
-		<h2>Welcome to Entertain<img src="../images/infslogo.png" width="20" height="20" alt="+"> </h2>
-		<h3>You haven't added any shows yet. Do you not watch TV?</h3>
-		<a href="shows.html">Of course I do!</a>
-		<a href="community.html">TV?</a>
-		<a href="shows.html">Movies?</a>
-	</section> 
+	<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+	<script>
+		function validateFormLogin() {
+			var email = document.forms["loginForm"]["email"].value;
+			var at = email.lastIndexOf("@");
+			if (email == null || email == "" || at == -1) {
+				alert("Please enter a valid email address and password" );
+				return false;
+			}
+		}
+		function validateFormRegister() {
+			var email = document.forms["registerForm"]["rEmail"].value;
+			var at = email.lastIndexOf("@");
+			if (email == null || email == "" || at == -1) {
+				alert("Please enter a valid email address" );
+				return false;
+			}
+		}
+	</script>
+	  </head>
+	  <body>
+		<header>
+			<img src="../images/infs.png" alt="Entertain + Logo">
+			<h1>For when you don't know what to watch next</h1>
+			<nav>
+				<a href="about.html"> About </a>
+				<a href="contact.html"> Contact Us </a>
+				<a href="trending.html"> Movie/ TV Ratings</a>
+				<a href="index.html"> Login /Register</a>
+			</nav>
+		</header>
+		<div id="formposition">
+			<div id="forms">
+				<form class="login" name="loginForm" action="index.html" onsubmit="return validateFormLogin()">
+					<h2>Login</h2><br>
+						Email<br>
+						<input type="text" name="email"> <br>
+						<br>Password<br>
+						<input type="password"><br>
+						<br><br><br><br><button>Login</button>
+				</form>
+
+				<form class="register" name="registerForm" action="index.html" onsubmit="return validateFormRegister()">
+					<h2>Get Started</h2><br>
+					Email<br>
+					<input type="text" name="rEmail"> <br><br>
+					Password <br>
+					<input type="password"> <br><br>
+					Confirm Password <br>
+					<input type="password"><br>
+					<br><button class="but">Register</button>
+				</form>
+			</div> <!--close forms-->
+		</div> <!--close formposition-->
+	<section id="about">
+		<h2>Manage shows and movies you have seen.</h2>
+		<h2>Review and rate your shows.</h2>
+		<h2>Receive custom suggestions based on your opinions</h2> 
+	</section>
   </body>
 </html>
