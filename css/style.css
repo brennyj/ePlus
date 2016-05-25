@@ -112,8 +112,9 @@ none button:hover{
 }
 
 .shows {
-	margin-left:10px;
-	margin-top:10px;
+	margin-left:auto;
+	margin-top:auto;
+	background-color: #333;
 }
 
 .shows h2{
@@ -121,9 +122,9 @@ none button:hover{
 }
 
 .shows button{
-	position:Absolute;
+	position:absolute;
 	width:100%;
-	Bottom:0;
+	bottom:0;
 	left:0;
 }
 
@@ -205,6 +206,14 @@ input{
 /**---------Form styling Ends--------**/
 /**Fade Caption Effect for Images
 based off the tutorial from http://demo.hongkiat.com/css3-image-captions/index.html**/
+#mainwrapper{
+	position: absolute;
+	float: center;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
 #mainwrapper .box {
 	border: 5px solid #fff;
 	cursor: pointer;

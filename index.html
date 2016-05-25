@@ -1,3 +1,24 @@
+<?php
+// Inialize session
+session_start();
+
+// Test the session to see if is_auth flag was set (meaning they logged in successfully)
+if (!isset($_SESSION["auth"])) {
+    header("location: login.php");
+    exit;
+}
+
+if (isset($_SESSION['admin_error'])) {
+    $error = $_SESSION['admin_error'];
+    unset($_SESSION['admin_error']);
+}
+
+if (isset($_SESSION['admin_success'])) {
+    $success = $_SESSION['admin_success'];
+    unset($_SESSION['admin_success']);
+}
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
